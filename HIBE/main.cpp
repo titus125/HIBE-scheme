@@ -65,15 +65,15 @@ int main() {
     node = tree->lookUpNode("UBC,Math,210");
     tuple<vector<element_t*>,string,string> yo = node->encrypt("New had happen unable uneasy. Drawings can followed improved out sociable not. Earnestly so do instantly pretended. See general few civilly amiable pleased account carried. Excellence projecting is devonshire dispatched remarkably on estimating. Side in so life past. Continue indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.");
     string result = node->decrypt(yo, node->getSt(), node->getQt());
-    cout<<result<<endl;
+    //cout<<result<<endl;
 
     node2 = tree->lookUpNode("SFU");
     tuple<vector<element_t*>,string,string> yo2 = node2->encrypt("As absolute is by amounted repeated entirely ye returned. These ready timed enjoy might sir yet one since. Years drift never if could forty being no. On estimable dependent as suffering on my. Rank it long have sure in room what as he. Possession travelling sufficient yet our. Talked vanity looked in to. Gay perceive led believed endeavor. Rapturous no of estimable oh therefore direction up. Sons the ever not fine like eyes all sure. ");
     string result2 = node2->decrypt(yo2, node2->getSt(), node2->getQt());
-    cout<<result2<<endl;
+    //cout<<result2<<endl;
     string result3 = node2->decrypt(yo2, node->getSt(), node2->getQt());
 
-    cout<<result3<<endl;
+    //cout<<result3<<endl;
     auto signature = node->sign("Bro we are great people");
     node2->verify(signature,"UBC,Math,210","Bro we are great people");
     auto signature2 = node2->sign("Yo");
